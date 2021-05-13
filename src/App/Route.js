@@ -1,7 +1,10 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { Home, Login, Register, Interviews } from '../index';
+import { Home } from '../Home';
+import { Login } from '../Auth';
+import { Register } from '../Auth';
+import { Interviews } from '../Interview';
 
 export default function AppRoute() {
   return (

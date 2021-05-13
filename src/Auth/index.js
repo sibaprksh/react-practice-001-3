@@ -1,3 +1,4 @@
-import authReducer from './auth.reducer';
+import authReducer from './reducer';
+import { authActions } from './actions';
 
-export { authReducer };
+export { authReducer, authActions };
