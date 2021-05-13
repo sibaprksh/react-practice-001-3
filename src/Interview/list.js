@@ -4,15 +4,16 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 
 //import { interviewActions } from '../../actions';
 
-import { interviewActions } from './interview.action';
+import { interviewActions } from './interview.actions';
 
 import './list.css';
 
 export default function List({ match }) {
   const { path } = match;
   const dispatch = useDispatch();
-  const { interviews = [] } = useSelector(state => state.interview);
-  const { isLoading } = useSelector(state => state.interview);
+  const { interviews = [], isLoading } = useSelector(
+    state => state.interviewReducer
+  );
 
   useEffect(() => {
     dispatch(interviewActions.get());

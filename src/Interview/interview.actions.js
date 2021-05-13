@@ -1,7 +1,7 @@
-import { appConstants, interviewConstants } from '../constants';
+import { interviewConstants } from './interview.constants';
 import { alertActions } from './';
 
-const { host } = appConstants;
+const { host } = interviewConstants;
 
 export const interviewActions = {
   create,

@@ -5,7 +5,7 @@ import { Steps, Step } from 'react-step-builder';
 
 //import { interviewActions } from "../../actions";
 
-import { interviewActions } from './interview.action';
+import { interviewActions } from './interview.actions';
 
 import './create.css';
 

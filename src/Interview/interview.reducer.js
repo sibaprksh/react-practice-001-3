@@ -1,6 +1,6 @@
-import { interviewConstants } from '../constants';
+import { interviewConstants } from './interview.constants';
 
-export function interview(state = {}, action) {
+export default function interviewReducer(state = {}, action) {
   switch (action.type) {
     case interviewConstants.CREATE_REQUEST:
       return {

@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 
-import { Link, useHistory, useLocation } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { authActions } from "../../actions";
+import { authActions } from '../../actions';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export default function Header() {
   const location = useLocation();
   const innerRef = useOuterClick(hide);
 
-  const { user } = useSelector(state => state.auth);
+  const { user } = useSelector(state => state.authReducer);
   const [isVisible, setVisibility] = useState(false);
 
   useEffect(hide, [location]);
@@ -40,8 +40,8 @@ export default function Header() {
             </a>
             <ul
               className={
-                "dropdown-menu dropdown-menu-right mr-5 " +
-                (isVisible ? "show" : "")
+                'dropdown-menu dropdown-menu-right mr-5 ' +
+                (isVisible ? 'show' : '')
               }
             >
               <Link className="dropdown-item" to="/register">
@@ -67,8 +67,8 @@ function useOuterClick(callback) {
     callbackRef.current = callback;
   });
   useEffect(() => {
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
     function handleClick(e) {
       if (
         innerRef.current &&

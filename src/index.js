@@ -7,12 +7,7 @@ import { Provider } from 'react-redux';
 import { configureFakeBackend } from './services';
 configureFakeBackend();
 
-// import { createStore, applyMiddleware } from 'redux';
-// import thunkMiddleware from 'redux-thunk';
-// import rootReducer from './reducers';
-// const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
-
-import store from './store';
+import { store } from './store';
 
 import './style.css';
 

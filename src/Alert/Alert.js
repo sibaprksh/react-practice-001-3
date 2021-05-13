@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-import { alertActions } from "../../actions";
+import { alertActions } from '../../actions';
 
 export default function Alert() {
-  const alert = useSelector(state => state.alert);
+  const alert = useSelector(state => state.alertReducer);
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -23,8 +23,8 @@ export default function Alert() {
 
   return alert.message ? (
     <div id="alert">
-      <div style={{ padding: "15px" }}>
-        <div className={`alert ${alert.type}`} style={{ margin: "0 auto" }}>
+      <div style={{ padding: '15px' }}>
+        <div className={`alert ${alert.type}`} style={{ margin: '0 auto' }}>
           <button
             type="button"
             className="close"
