@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { authActions } from "../../actions";
+import { authActions } from '../actions';
 
-import "./Login.css";
+import './Login.css';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -12,13 +12,13 @@ export default function Login() {
   const history = useHistory();
 
   const [inputs, setInputs] = useState({
-    username: "",
-    password: ""
+    username: '',
+    password: ''
   });
 
   const { username, password } = inputs;
 
-  const loading = useSelector(state => state.auth.loggingIn);
+  const {loggingIn: loading} = useSelector(state => state.authReducer);
 
   const [isSubmitted, setSubmitted] = useState(false);
 
@@ -35,7 +35,7 @@ export default function Login() {
 
     if (username && password) {
       // get return url from location state or default to home page
-      const { from } = location.state || { from: { pathname: "/" } };
+      const { from } = location.state || { from: { pathname: '/' } };
       dispatch(authActions.login(inputs, from, history));
     }
   }
@@ -56,8 +56,8 @@ export default function Login() {
                 value={username}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !username ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !username ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !username && (
@@ -72,8 +72,8 @@ export default function Login() {
                 value={password}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !password ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !password ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !password && (

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { _set } from "../../utils";
-import { authActions } from "../../actions";
+import { _set } from '../../utils';
+import { authActions } from '../actions';
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -11,11 +11,11 @@ export default function Register() {
   const history = useHistory();
 
   const [inputs, setInputs] = useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
     name: {
-      first: "",
-      last: ""
+      first: '',
+      last: ''
     }
   });
 
@@ -41,7 +41,7 @@ export default function Register() {
       inputs.password
     ) {
       // get return url from location state or default to home page
-      const { from } = location.state || { from: { pathname: "/" } };
+      const { from } = location.state || { from: { pathname: '/' } };
       dispatch(authActions.register(inputs, from, history));
     }
   }
@@ -66,8 +66,8 @@ export default function Register() {
                 value={name.first}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !name.first ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !name.first ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !name.first && (
@@ -85,8 +85,8 @@ export default function Register() {
                 value={name.last}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !name.last ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !name.last ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !name.last && (
@@ -104,8 +104,8 @@ export default function Register() {
                 value={username}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !username ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !username ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !username && (
@@ -123,8 +123,8 @@ export default function Register() {
                 value={password}
                 onChange={handleChange}
                 className={
-                  "form-control" +
-                  (isSubmitted && !password ? " is-invalid" : "")
+                  'form-control' +
+                  (isSubmitted && !password ? ' is-invalid' : '')
                 }
               />
               {isSubmitted && !password && (
