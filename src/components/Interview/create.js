@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { Steps, Step } from "react-step-builder";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Steps, Step } from 'react-step-builder';
 
-import { interviewActions } from "../../actions";
+//import { interviewActions } from "../../actions";
 
-import "./create.css";
+import { interviewActions } from './interview.action';
+
+import './create.css';
 
 const Navigation = props => {
   //console.log("Navigation");
@@ -54,30 +56,30 @@ const SelectStep = props => {
   //const history = useHistory();
 
   const [list] = useState([
-    { name: "Java" },
-    { name: "JavaScript" },
-    { name: "CSS" },
-    { name: "HTML" },
-    { name: "Angular" },
-    { name: "ReactJs" },
-    { name: "NodeJs" },
-    { name: ".NET" },
-    { name: ".NET MVC" },
-    { name: "AI" },
-    { name: "Spark" }
+    { name: 'Java' },
+    { name: 'JavaScript' },
+    { name: 'CSS' },
+    { name: 'HTML' },
+    { name: 'Angular' },
+    { name: 'ReactJs' },
+    { name: 'NodeJs' },
+    { name: '.NET' },
+    { name: '.NET MVC' },
+    { name: 'AI' },
+    { name: 'Spark' }
   ]);
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [selected, setSelected] = useState(
     props.state.selected || [
-      { name: ".NET MVC" },
-      { name: "AI" },
-      { name: "Spark" }
+      { name: '.NET MVC' },
+      { name: 'AI' },
+      { name: 'Spark' }
     ]
   );
 
   useEffect(() => {
-    props.setState("selected", [...selected]);
+    props.setState('selected', [...selected]);
   }, [selected]);
 
   const onSelection = data => {
@@ -109,12 +111,12 @@ const SelectStep = props => {
     .map((data, index) => (
       <div
         className={[
-          "text-center",
-          "box",
-          selected.some(fn(data)) ? "selected" : ""
+          'text-center',
+          'box',
+          selected.some(fn(data)) ? 'selected' : ''
         ]
           .filter(Boolean)
-          .join(" ")}
+          .join(' ')}
         key={index}
         onClick={() => onSelection(data)}
       >
@@ -150,9 +152,9 @@ const TimeStep = props => {
   //props.next(); // jump to next Step
 
   const slotTemplate = {
-    date: "2021-05-07",
-    "start-time": "10:00",
-    "end-time": "23:00"
+    date: '2021-05-07',
+    'start-time': '10:00',
+    'end-time': '23:00'
   };
 
   const [slots, setSlots] = useState(
@@ -161,7 +163,7 @@ const TimeStep = props => {
 
   useEffect(() => {
     const s = slots.filter(s => s.date); // filter out invalid dates
-    props.setState("slots", s);
+    props.setState('slots', s);
   }, [slots]);
 
   const handleChange = index => e => {
@@ -192,14 +194,14 @@ const TimeStep = props => {
             <input
               type="time"
               name="start-time"
-              value={slot["start-time"]}
+              value={slot['start-time']}
               className="form-control"
               onChange={handleChange(index)}
             />
             <input
               type="time"
               name="end-time"
-              value={slot["end-time"]}
+              value={slot['end-time']}
               className="form-control"
               onChange={handleChange(index)}
             />
@@ -254,7 +256,7 @@ const FinalStep = props => {
       <ol>
         {props.state.slots?.map((s, index) => (
           <li key={index}>
-            {s.date} : {s["start-time"]} - {s["end-time"]}
+            {s.date} : {s['start-time']} - {s['end-time']}
           </li>
         ))}
       </ol>
@@ -275,7 +277,7 @@ export default function Create() {
     after: After,
     navigation: {
       component: Navigation,
-      location: "after"
+      location: 'after'
     }
   };
   return (
