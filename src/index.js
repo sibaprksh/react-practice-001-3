@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // setup fake backend
-import { configureFakeBackend } from './services';
+import { configureFakeBackend } from './App/fake.service';
 configureFakeBackend();
 
 import { store } from './store';

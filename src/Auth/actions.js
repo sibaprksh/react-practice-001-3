@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 
 import { authConstants } from './constants';
-import { authService } from '../services';
+import { authService } from './service';
 import { alertActions } from './';
 
 export const authActions = {
