@@ -2,7 +2,7 @@ import React from 'react';
 
 // components
 import { Header } from '../Header';
-import Route from './Route';
+import Route from './route';
 import { Alert } from '../Alert';
 
 import './app.css';

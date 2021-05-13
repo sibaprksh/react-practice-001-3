@@ -3,9 +3,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Steps, Step } from 'react-step-builder';
 
-//import { interviewActions } from "../../actions";
-
-import { interviewActions } from './interview.actions';
+import { interviewActions } from './actions';
 
 import './create.css';
 

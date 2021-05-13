@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import List from './list';
 import Create from './create';
 
-import interviewReducer from './interview.reducer';
+import interviewReducer from './reducer';
 
 function Interviews({ match }) {
   const { path } = match;
