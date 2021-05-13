@@ -1,4 +1,4 @@
-import { interviewConstants } from './interview.constants';
+import { interviewConstants } from './constants';
 
 export default function interviewReducer(state = {}, action) {
   switch (action.type) {

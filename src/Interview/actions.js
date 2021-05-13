@@ -1,5 +1,5 @@
-import { interviewConstants } from './interview.constants';
-import { alertActions } from './';
+import { interviewConstants } from './constants';
+import { alertActions } from '../Alert';
 
 const { host } = interviewConstants;
 

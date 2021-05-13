@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 
-import { interviewActions } from './interview.actions';
+import { interviewActions } from './actions';
 
 import './list.css';
 
