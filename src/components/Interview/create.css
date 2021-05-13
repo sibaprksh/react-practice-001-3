@@ -1,0 +1,65 @@
+/* search */
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+/* chips */
+
+.chip {
+  display: inline-block;
+  padding: 0 20px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  margin: 6px 4px 0 0;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+
+/* box */
+
+div.box {
+}
+
+div.box.selected {
+  border: 2px dotted green;
+}
+
+/* Slot */
+.slot-container {
+  display: flex;
+  gap: 20px;
+}

@@ -1,0 +1,6 @@
+#alert {
+  width: 50%;
+  right: 0;
+  position: fixed;
+  z-index: 1031;
+}
