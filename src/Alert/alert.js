@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { alertActions } from '../../actions';
+import { alertActions } from './actions';
 
 export default function Alert() {
   const alert = useSelector(state => state.alertReducer);
