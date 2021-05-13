@@ -40,9 +40,9 @@ export default function List({ match }) {
                   .join(', ')}
               </div>
               <div className="col-1">
-                <label class="switch">
+                <label className="switch">
                   <input type="checkbox" />
-                  <span class="slider round" />
+                  <span className="slider round" />
                 </label>
               </div>
             </div>
