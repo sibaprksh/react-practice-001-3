@@ -1,8 +1,8 @@
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
-import { authConstants } from "../constants";
-import { authService } from "../services";
-import { alertActions } from "./";
+import { authConstants } from './constants';
+import { authService } from '../services';
+import { alertActions } from './';
 
 export const authActions = {
   login,
@@ -27,7 +27,7 @@ function register(inputs, from, history) {
           dispatch(
             alertActions.success(authConstants.REGISTER_SUCCESS_MESSAGE)
           );
-          history.push("/login");
+          history.push('/login');
         } else {
           throw authConstants.REGISTER_FAILURE_MESSAGE;
         }
@@ -62,7 +62,7 @@ function login({ username, password }, from, history) {
       }
 
       //store user details and jwt token in local storage to keep user logged in between page refreshes
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem('user', JSON.stringify(user));
 
       dispatch(success(user));
       history.push(from);
@@ -87,6 +87,6 @@ function logout(history) {
   return dispatch => {
     authService.logout();
     dispatch({ type: authConstants.LOGOUT });
-    history.push("/");
+    history.push('/');
   };
 }

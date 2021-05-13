@@ -1,3 +1,4 @@
-import App from "./App";
+import App from './app';
+import { appConstants } from './constants';
 
-export { App };
+export { App, appConstants };

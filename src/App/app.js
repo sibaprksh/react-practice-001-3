@@ -1,11 +1,11 @@
 import React from 'react';
 
 // components
-import { Header } from '../index';
+import { Header } from '../Header';
 import Route from './Route';
 import { Alert } from '../Alert';
 
-import './App.css';
+import './app.css';
 
 export default function App() {
   return (

@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { authActions } from '../../actions';
+import { authActions } from '../Auth';
 
 export default function Header() {
   const dispatch = useDispatch();

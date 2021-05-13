@@ -1,4 +1,4 @@
-import { appConstants } from "../constants";
+import { appConstants } from '../App';
 
 const { host } = appConstants;
 
@@ -11,8 +11,8 @@ export const authService = {
 
 function login({ username, password }) {
   const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
   };
 
@@ -28,13 +28,13 @@ function login({ username, password }) {
 
 function logout() {
   // remove user from local storage to log user out
-  localStorage.removeItem("user");
+  localStorage.removeItem('user');
 }
 
 function register(inputs) {
   const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(inputs)
   };
   return fetch(`${host}/users`, requestOptions).then(handleResponse);
@@ -42,8 +42,8 @@ function register(inputs) {
 
 function isAvailable(inputs) {
   const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(inputs)
   };
 
